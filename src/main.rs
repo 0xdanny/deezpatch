@@ -1,6 +1,5 @@
+use deezpatch::startup::run;
 use std::net::TcpListener;
-
-use deezpatch::run;
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
