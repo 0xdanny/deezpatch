@@ -524,6 +524,7 @@ dependencies = [
  "reqwest",
  "secrecy",
  "serde 1.0.195",
+ "serde-aux",
  "sqlx",
  "tokio",
  "tracing",
@@ -598,6 +599,9 @@ name = "either"
 version = "1.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a26ae43d7bcc3b814de94796a5e736d4029efb0ee900c12e2d54c993ad1a1e07"
+dependencies = [
+ "serde 1.0.195",
+]
 
 [[package]]
 name = "encoding_rs"
@@ -1741,6 +1745,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde-aux"
+version = "4.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a86348501c129f3ad50c2f4635a01971f76974cd8a3f335988a0f1581c082765"
+dependencies = [
+ "chrono",
+ "serde 1.0.195",
+ "serde_json",
+]
+
+[[package]]
 name = "serde-hjson"
 version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1952,9 +1967,12 @@ dependencies = [
  "dotenv",
  "either",
  "heck",
+ "hex",
  "once_cell",
  "proc-macro2",
  "quote",
+ "serde 1.0.195",
+ "serde_json",
  "sha2",
  "sqlx-core",
  "sqlx-rt",
